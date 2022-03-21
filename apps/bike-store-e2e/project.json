@@ -1,0 +1,28 @@
+{
+  "root": "apps/bike-store-e2e",
+  "sourceRoot": "apps/bike-store-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/bike-store-e2e/cypress.json",
+        "devServerTarget": "bike-store:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "bike-store:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/bike-store-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["bike-store"]
+}
