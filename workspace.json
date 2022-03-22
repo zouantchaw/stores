@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "bike-store": "apps/bike-store",
-    "bike-store-e2e": "apps/bike-store-e2e"
+    "bike-store-e2e": "apps/bike-store-e2e",
+    "blog": "apps/blog",
+    "blog-e2e": "apps/blog-e2e"
   }
 }
